@@ -6,5 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'laboIV-proyectos-clases';
+  title = 'Primer proyecto';
+
+  public edadUno: string = "";
+  public edadDos: string = "";
+  public resultadoPromedio: number = 0;
+  public resultadoSuma: number = 0;
+
+  promedio() {
+    this.resultadoPromedio = (Number(this.edadUno) + Number(this.edadDos))/2;
+  }
+
+  suma() {
+    this.resultadoSuma = (Number(this.edadUno) + Number(this.edadDos));
+  }
+
+  calcular() {
+    this.suma();
+    this.promedio();
+  }
+
+  limpiar() {
+    this.edadUno = "";
+    this.edadDos = "";
+    this.resultadoPromedio = 0;
+    this.resultadoSuma = 0;
+  }
 }
